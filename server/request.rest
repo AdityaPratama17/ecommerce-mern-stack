@@ -1,0 +1,66 @@
+GET http://localhost:5000/api/product/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmJlNDk1YmUyNmU3NWZkNzQzNDY3MzUiLCJuYW1lIjoiQWRpdHlhIFByYXRhbWEiLCJlbWFpbCI6ImFkaXRAbWFpbC5jb20iLCJpYXQiOjE2NTY3MjA1MzcsImV4cCI6MTY1NjcyMDU1N30.EE_Hei_frLGhEk-XkgeR9882J9jxUc02BrTEsz65rO8
+
+###
+POST http://localhost:5000/api/register/
+Content-Type: application/json
+
+{
+  "name": "Aditya Pratama",
+  "email": "adit@mail.com",
+  "password": "password",
+  "confPassword": "password",
+  "alamat": "Bali",
+  "role": "admin"
+}
+
+###
+POST http://localhost:5000/api/login/
+Content-Type: application/json
+
+{
+  "email": "adit@mail.com",
+  "password": "password"
+}
+
+###
+GET http://localhost:5000/api/token/
+
+###
+DELETE  http://localhost:5000/api/logout/
+
+###
+GET http://localhost:5000/api/cart/62be7bf4584d035346342267
+
+###
+GET http://localhost:5000/api/cart/total-harga/62be7bf4584d035346342267
+
+###
+POST http://localhost:5000/api/cart/
+Content-Type: application/json
+
+{
+  "id_product": "62bf91f7a4c037343dda9680",
+  "id_user": "62be7bf4584d035346342267"
+}
+
+###
+PATCH http://localhost:5000/api/cart/62c19aebccea169e54da3366
+Content-Type: application/json
+
+{
+  "jumlah": "2"
+}
+
+###
+DELETE http://localhost:5000/api/cart/62c19aebccea169e54da3366
+Content-Type: application/json
+
+###
+GET  http://localhost:5000/api/order/
+
+###
+GET  http://localhost:5000/api/order/kirim/62c3ac233c4b1614c1232e0e/62bf91f7a4c037343dda9680
+
+###
+GET  http://localhost:5000/api/order/tolak/62c394d735f3569313c1ebf0
